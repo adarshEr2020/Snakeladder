@@ -3,26 +3,27 @@ public class SnakeLadder {
 	public static final int NO_PLAY = 0;
 	public static final int LADDER = 1;
 	public static final int SNAKE = 2;
-	public static final int WINNING_POSITION = 100;
-	public static void main(String[] args) {
 
-		System.out.println("welcome to snake ladder game :");
+	public void dice() {
 		// player initial position 
 		int playerPosition = 0;
-		System.out.println("player start position = " +playerPosition);
+		int winningPosition = 100;
 
-		while(playerPosition <= WINNING_POSITION) {
+		System.out.println("player start position = " +playerPosition);
+		
+		while(playerPosition <= winningPosition) {
 
 			// generate random dice value 1 to 6
-			int diceRoll=(int)Math.floor((Math.random()*(6)+1));
+			int diceRoll=(int) (Math.random()*(6)+1);
 			System.out.println("Dice roll : " +diceRoll);
 
-			int option = (int)((Math.random()*10) %3);
+			int option = (int)((Math.random()*3));
 			System.out.println("option : " +option);
+	
 			switch(option) {
 			case NO_PLAY:
 				// player stay in the same position
-				playerPosition +=diceRoll;
+				playerPosition +=0;
 				break;
 
 			case LADDER:
@@ -38,5 +39,13 @@ public class SnakeLadder {
 			}
 			System.out.println("player position : " +playerPosition);
 		}
+	}
+	public static void main(String[] args) {
+
+		System.out.println("welcome to snake ladder game :");
+		SnakeLadder start = new SnakeLadder();
+		start.dice();
+
+
 	}
 }
