@@ -21,7 +21,7 @@ public class SnakeLadder {
 		switch(option) {
 		case NO_PLAY:
 			// player stay in the same position
-			playerPosition +=diceRoll;
+			playerPosition +=0;
 			break;
 	
 		case LADDER:
@@ -31,7 +31,6 @@ public class SnakeLadder {
 		
 		case SNAKE:
 			// if player position greater then subtract player position
-			if(playerPosition > 0)
 				playerPosition -= diceRoll;
 			break;
 		}
