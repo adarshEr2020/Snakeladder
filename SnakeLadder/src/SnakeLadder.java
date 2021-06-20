@@ -10,8 +10,7 @@ public class SnakeLadder {
 		int winningPosition = 100;
 
 		System.out.println("player start position = " +playerPosition);
-
-		if(playerPosition == 0)
+		
 		while(playerPosition <= winningPosition) {
 
 			// generate random dice value 1 to 6
@@ -20,7 +19,7 @@ public class SnakeLadder {
 
 			int option = (int)((Math.random()*3));
 			System.out.println("option : " +option);
-
+	
 			switch(option) {
 			case NO_PLAY:
 				// player stay in the same position
